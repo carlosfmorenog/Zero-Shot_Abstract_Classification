@@ -1,24 +1,3 @@
-#%% Code of the CDSMOTE method modified to work with multiclass datasets
-# This variant of the method pslits the dataset into train and test for classification
-
-# Please reference the following papers:
-    
-# Elyan E., Moreno-García C.F., Jayne C., CDSMOTE: class decomposition and synthetic minority class oversampling technique for imbalanced-data classification. Neural Comput Appl. 2020. doi:10.1007/s00521-020-05130-z
-# @article{Elyan2020,
-# author = {Elyan, Eyad and Moreno-Garcia, Carlos Francisco and Jayne, Chrisina},
-# doi = {10.1007/s00521-020-05130-z},
-# isbn = {0123456789},
-# issn = {1433-3058},
-# journal = {Neural Computing and Applications},
-# publisher = {Springer London},
-# title = {{CDSMOTE: class decomposition and synthetic minority class oversampling technique for imbalanced-data classification}},
-# url = {https://doi.org/10.1007/s00521-020-05130-z},
-# year = {2020}
-# }
-
-# IJCNN 2021
-
-
 #%% 0. Import necessary packages
 
 import sys
@@ -41,17 +20,17 @@ from sklearn import metrics
 
 #%% ############################# 1. Input params #############################
 
-database = 'AcevesMartins' # name of the folder where the csv file is
-dataset = 'acevesmartins-2021Doc2vec' # name of the csv file containing the data and target
-classdecomp = 'DBSCAN' # 'kmeans', 'FCmeans', 'FCmeansOptimised' and 'DBSCAN' available (SKMEANS coming soon)
+# database = 'AcevesMartins' # name of the folder where the csv file is
+# dataset = 'acevesmartins-2021Doc2vec' # name of the csv file containing the data and target
+# classdecomp = 'DBSCAN' # 'kmeans', 'FCmeans', 'FCmeansOptimised' and 'DBSCAN' available (SKMEANS coming soon)
 metric_dbscan = 'cosine' # distance used to calculate the clustering in dbscan
                          # more options here: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise_distances.html#sklearn.metrics.pairwise_distances
 oversampler = 'SMOTE' # 'SMOTE' and 'ADASYN' available
-n_clusters = 4 # used in option "fixed" and only if clusterings == "Kmeans" || "FCmeans"
-classifier = 'SVM' # RF also available (MLP/NN/CNN coming soon)
+# n_clusters = 4 # used in option "fixed" and only if clusterings == "Kmeans" || "FCmeans"
+# classifier = 'SVM' # RF also available (MLP/NN/CNN coming soon)
 number_of_tests = 5 # How many times to repeat the classification experiment comparing the original and new db
-EPS = 0.5
-threshold = 10 # if samples in positive class are apart from average by more than this value, apply oversampling (Sec 3.2 paper)
+# eps_DBSCAN = 0.5
+threshold = 10 # if samples in positive class are apart from average by more than this value, apply oversampling (Sec 3.2 cdsmote paper)
 k_type = 'fixed' # Indicates how to calculate k values for class decomposition
 # Choose from:
 # "fixed": The majority class is decomposed using k=n_clusters
