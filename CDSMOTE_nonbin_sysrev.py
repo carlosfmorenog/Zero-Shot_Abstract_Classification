@@ -1,4 +1,4 @@
-D#%% Code of the CDSMOTE method modified to work with multiclass datasets
+#%% Code of the CDSMOTE method modified to work with multiclass datasets
 # This variant of the method pslits the dataset into train and test for classification
 
 # Please reference the following papers:
