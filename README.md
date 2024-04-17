@@ -19,7 +19,7 @@ url = {https://doi.org/10.1007/s00521-020-05130-z},
 year = {2020}
 }
 
-### THIS DATASET AND METHOD
+### THIS DATASET AND NEW METHOD
 Moreno-García, C. F., Jayne, C., Elyan, E., & Aceves-Martins, M. (2023). A novel application of machine learning and zero-shot classification methods for automated abstract screening in systematic reviews. Decision Analytics Journal, 6, 100162. https://doi.org/10.1016/J.DAJOUR.2023.100162
 
 @article{Moreno-Garcia2023,
